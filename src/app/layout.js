@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,7 +23,14 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">{children}
+
+
+        <div id="container-9e91e2fa87bdcf9e767f1a072ea6b03f">
+          <Script src="https://pl29750684.effectivecpmnetwork.com/9e91e2fa87bdcf9e767f1a072ea6b03f/invoke.js" />
+          <Script src="https://pl29750683.effectivecpmnetwork.com/32/6c/34/326c34aae408c53f6177d1a30db9cc32.js" />
+        </div>
+      </body>
     </html>
   );
 }
