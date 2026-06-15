@@ -1,5 +1,6 @@
 "use client";
 import Image from 'next/image';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 interface CountMap {
@@ -73,9 +74,14 @@ export default function Home() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-indigo-100 to-purple-200 p-8 dark:from-gray-900 dark:to-gray-800">
       <h1 className="mb-2 text-4xl font-bold text-gray-900 dark:text-white">Votoni për kandidatin tuaj të preferuar</h1>
+      <span>
+        <Link className='text-[red] underline decoration-[red]' href='https://www.youtube.com/watch?v=s0BaVjhbNB4'> Rama Ik - Rama Ik - Muzike Shiptare</Link>
+      </span>
       <p className="mb-8 text-xl font-medium text-gray-700 dark:text-gray-300">
         Numri Total: <span className="font-bold text-indigo-600 dark:text-indigo-400">{totalVotes}</span>
+
       </p>
+
 
       <div className="grid w-full max-w-4xl grid-cols-1 gap-8 md:grid-cols-2">
         {candidates.map((c) => (
@@ -92,9 +98,11 @@ export default function Home() {
           </div>
         ))}
       </div>
-      {hasVoted && (
-        <p className="mt-6 text-lg font-medium text-gray-700 dark:text-gray-200">Thank you for voting! You may only vote once.</p>
-      )}
-    </div>
+      {
+        hasVoted && (
+          <p className="mt-6 text-lg font-medium text-gray-700 dark:text-gray-200">Thank you for voting! You may only vote once.</p>
+        )
+      }
+    </div >
   );
 }
