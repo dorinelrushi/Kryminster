@@ -16,6 +16,14 @@ const candidates = [
     name: 'Agron Shehaj',
     img: '/agron.jpg',
   },
+  {
+    name: 'Edi Rama',
+    img: '/rama.jpg',
+  },
+  {
+    name: 'Sali Berisha',
+    img: '/berisha.jpg',
+  },
 ];
 
 export default function Home() {
