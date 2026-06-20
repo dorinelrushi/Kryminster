@@ -27,3 +27,8 @@ export async function getVotesCollection() {
   await client.connect();
   return client.db().collection('votes');
 }
+
+export async function getCommentsCollection() {
+  await client.connect();
+  return client.db().collection('comments');
+}
